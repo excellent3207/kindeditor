@@ -22,12 +22,14 @@ var _VERSION = '${VERSION}',
 	_matches = /(?:msie|firefox|webkit|opera)[\/:\s](\d+)/.exec(_ua),
 	_V = _matches ? _matches[1] : '0',
 	_TIME = new Date().getTime();
+
 function _isArray(val) {
 	if (!val) {
 		return false;
 	}
 	return Object.prototype.toString.call(val) === '[object Array]';
 }
+
 function _isFunction(val) {
 	if (!val) {
 		return false;
@@ -79,7 +81,7 @@ function _addUnit(val, unit) {
 
 function _removeUnit(val) {
 	var match;
-	return val && (match = /(\d+)/.exec(val)) ? parseFloat(match[1]) : 0;
+	return val && (match = /(\d+)/.exec(val)) ? parseInt(match[1], 10) : 0;
 }
 
 function _escape(val) {

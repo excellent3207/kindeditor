@@ -9,7 +9,6 @@
     </head>
     <body> 
         <textarea id="editor_id" style="width:50px;height:10px;"></textarea>
-        <p style="height:10000px;">fadfadfadfadfadfadfaf反倒是大幅减少了快点放假啊了快递放假啊了</p>
         <script>
         KindEditor.ready(function(K){
         	console.log(K.VERSION);
@@ -27,12 +26,6 @@
         		fullscreenShortcut: true,
         		fixToolBar: true
         	});
-            K.ctrl(editor.edit.doc, 'z', function(){
-                console.log('ctrl + z');
-            });
-            var range = K.range(document);
-            range.selectNode(K('p')[0]);
-            range.collapse(true);
         });
         </script>
     </body>
