@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>kindeditor</title>
+        <link href="./themes/simple/simple.css" rel="stylesheet" />
+        <script src="./kindeditor-all.js"></script>
+        <script src="./lang/zh-CN.js"></script>
+    </head>
+    <body> 
+        <textarea id="editor_id" style="width:50px;height:10px;"></textarea>
+        <p style="height:10000px;">fadfadfadfadfadfadfaf反倒是大幅减少了快点放假啊了快递放假啊了</p>
+        <script>
+        KindEditor.ready(function(K){
+        	console.log(K.VERSION);
+        	console.log(K.V);
+        	window.editor = K.create('#editor_id',{
+        		minWidth: 1000,
+        		minHeight: 100,
+        		autoHeightMode: true,
+        		resizeType: 0,
+        		langType: 'zh-CN',
+        		designMode: true,
+        		fullscreenMode: false,
+        		shadowMode: true,
+        		allowImageUpload: true,
+        		fullscreenShortcut: true,
+        		fixToolBar: true
+        	});
+            K.ctrl(editor.edit.doc, 'z', function(){
+                console.log('ctrl + z');
+            });
+            var range = K.range(document);
+            range.selectNode(K('p')[0]);
+            range.collapse(true);
+        });
+        </script>
+    </body>
+</html>
