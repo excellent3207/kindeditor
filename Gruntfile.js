@@ -6,7 +6,7 @@ var BANNER = '/* <%= pkg.name %> <%= pkg.version %> (<%= grunt.template.today("y
 var SRC_FILES = [
 	'src/header.js',
 	'src/core.js',
-	'src/myconfig.js',
+	'src/config.js',
 	'src/event.js',
 	'src/html.js',
 	'src/selector.js',
