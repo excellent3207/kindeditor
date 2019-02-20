@@ -12,3 +12,7 @@ http://kindeditor.org/
 * daif alotaibi (http://daif.net/) : Arabic Translation
 * fisker (https://github.com/fisker) : QQ style theme
 * composite (https://github.com/composite) : Korean Translation
+
+初始化项目：
+    npm install  //初始化依赖的包
+    grunt build //编译项目
